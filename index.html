@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shapes</title>
+    <style>
+        .traingle{
+            height: 900px;
+            background: black;
+            position: relative;
+        }
+    
+        .traingle-left{
+            width: 0;
+            height: 0;
+            border-left: 50px solid black;
+            border-right: 50px solid black;
+            border-bottom: 100px solid red;;
+            background: red;
+            transition: 3s;
+        }
+        .traingle-left:hover{
+            background-color: white;
+           transform: rotate(90deg);
+            
+        }
+        .traingle-right{
+            width: 0;
+            height: 0;
+            border-top: 100px solid green;
+            border-left: 50px solid black;
+            border-right: 50px solid black;
+            background: green;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transition: 3s;
+        }
+        .traingle-right:hover{
+            background-color: green;
+          
+            transform:translateY(50%)
+        }
+        .traingle-top{
+            width: 0;
+            height: 0;
+            border-right: 100px solid orange;
+            border-top: 50px solid black;
+            border-bottom: 50px solid black;
+            position: absolute;
+            transition: 3s;
+            left: 100px;
+            bottom: 100px;
+        }
+        .traingle-top:hover{
+            transform: skewX(80deg);
+        }
+        .traingle-bottom{
+            width: 0;
+            height: 0;
+            border-left: 100px solid blue;
+            border-top: 50px solid black;
+            border-bottom: 50px solid black;
+            position: absolute;
+            transition: 3s;
+            right: 100px;
+            bottom: 100px;
+        }
+        .traingle-bottom:hover{
+       transform: matrix(-1, -1, 1, -1, 5, 5);
+        }
+        
+        .traingle-middle{
+             width: 100px;
+            height: 100px;
+           background: red;
+            position: absolute;
+            top: 400px;
+            left: 600px;
+
+            transition: 3s;
+            /*animation: example;
+           animation-duration: 10s;*/
+          
+        }
+        .traingle-middle:before{
+            content: "";
+            
+            height: 10px;
+            width: 0px;
+            background-color: blueviolet;
+           
+            opacity: 0;
+        }
+        .traingle-middle:hover:before{
+            opacity: 1;
+            width: 100%;
+
+        }
+        /*@keyframes example{
+             0%{
+                width: 0;
+            height: 0;
+            border-left: 50px solid black;
+            border-right: 50px solid black;
+            border-bottom: 100px solid red;;
+            background: red;
+            }
+            25%{
+                width: 0;
+            height: 0;
+            border-top: 100px solid green;
+            border-left: 50px solid black;
+            border-right: 50px solid black;
+            background: green;
+            }
+            50%{
+                width: 0;
+            height: 0;
+            border-right: 100px solid orange;
+            border-top: 50px solid black;
+            border-bottom: 50px solid black;
+            }
+            75%{
+                width: 0;
+            height: 0;
+            border-left: 100px solid blue;
+            border-top: 50px solid black;
+            border-bottom: 50px solid black;
+            }
+            100%{
+                width: 0;
+            height: 0;
+            border-left: 50px solid black;
+            border-right: 50px solid black;
+            border-bottom: 100px solid red;;
+            background: red;
+            }
+        }*/
+        .traingle-middle:hover{
+           
+           transform: rotate(360deg);
+            
+        }
+        .trapezoidal{
+            border-bottom: 100px solid chocolate;
+            border-right: 50px solid black;
+            border-left: 50px solid black;
+            width: 100px;
+            height: 0;
+            top: 0;
+            left: 0;
+            transition: 3s;
+            margin: 0 auto;
+        }
+         
+        .trapezoidal:hover{transform: scale(1.5);}
+        
+        .parallel{
+            height: 100px;
+            width: 150px;
+            transform: skewX(20deg);
+            /*transform: skewY(20deg);*/
+            background-color: darkturquoise;
+            position: absolute;
+            top: 800px;
+            left: 600px;
+            transition: 3s;
+        }
+        .parallel:hover{
+            transform: rotateX(30deg);
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="traingle">
+       <div class="traingle_shapes">
+        <div class="traingle-left"></div>
+        <div class="traingle-right"></div>
+        <div class="traingle-top"></div>
+        <div class="traingle-bottom"></div>
+        <div class="traingle-middle"></div>
+        <div class="trapezoidal"></div>
+        <div class="parallel"></div>
+    </div>
+    </div>
+</body>
+</html>
